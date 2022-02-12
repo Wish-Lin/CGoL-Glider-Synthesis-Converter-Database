@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="LifeViewer" content="viewer textarea"> <!--required tag-->
+<script src="lv-plugin.js"></script> <!--assumes plug-in is in the same directory as html file-->
+<script src="database.js"></script> <!--my script-->
+
+
+
+
+
+
+
+
+<style>
+body{
+	background-color:#DBF9FC;
+	margin:50px;
+}
+#banner{
+	font-family: Georgia, Verdana, sans-serif;
+	font-size: 50px;
+}
+#counter{
+	font-family: Georgia, Verdana, sans-serif;
+	font-size: 28px;
+}
+#display{
+	font-family: Georgia, Verdana, sans-serif;
+	font-size: 32px;
+}
+#subtitle{
+	font-family: Georgia, Verdana, sans-serif;
+	font-size: 16px;
+}
+#input-descriptions{
+	font-family: Georgia, Verdana, sans-serif;
+	font-size: 16px;
+}
+
+button{
+	font-family: Georgia, Verdana, sans-serif;
+	font-size: 20px;
+}
+.lv-rle{
+	
+	resize:none;
+	width:594px;
+	min-height:120px;
+	max-height:120px;
+	font:12pt arial;
+}
+.lv-buttons{
+	margin-bottom:4px;
+}
+#ending{
+	font-family: Georgia, Verdana, sans-serif;
+	font-size: 16px;
+}
+</style>
+</head>
+<body onload="SetCounter()">
+<center>
+<p id="banner">CGoL Glider Synthesis Converter Database</p>
+<p id="counter"></p>            <!--filled in by script-->
+<p id="subtitle">Programmed and maintained by <b>Random life lover</b><br><br>Specials thanks to: <b>BobShemyakin</b></p><br>
+<p id="input-descriptions">From:
+<select name="from" id="from">
+  <option value="unspecified" selected>UNSPECIFIED</option>
+  <option value="other">OTHER</option>
+  <option value="sep-line">-----------------</option>
+  <option value="barge">Barge</option>
+  <option value="beehive">Beehive</option>
+  <option value="blinker">Blinker</option>
+  <option value="block">Block</option>
+  <option value="boat">Boat</option>
+  <option value="bookend">Bookend</option>
+  <option value="bun">Bun</option>
+  <option value="carrier">Carrier</option>
+  <option value="carrier">Claw</option>
+  <option value="dove">Dove</option>
+  <option value="hook">Hook</option>
+  <option value="loaf">Loaf</option>
+  <option value="long-barge">Long Barge</option>
+  <option value="long-boat">Long Boat</option>
+  <option value="long-ship">Long Ship</option>
+  <option value="mango">Mango</option>
+  <option value="pond">Pond</option>
+  <option value="pre-block">Pre Block</option>
+  <option value="ship">Ship</option>
+  <option value="snake">Snake</option>
+  <option value="table">Table</option>
+  <option value="tail">Tail</option>
+  <option value="tub">Tub</option>
+</select><br><br>
+To:
+<select name="to" id="to">
+  <option value="unspecified" selected>UNSPECIFIED</option>
+  <option value="other">OTHER</option>
+  <option value="sep-line">-----------------</option>
+  <option value="barge">Barge</option>
+  <option value="beehive">Beehive</option>
+  <option value="blinker">Blinker</option>
+  <option value="block">Block</option>
+  <option value="boat">Boat</option>
+  <option value="bookend">Bookend</option>
+  <option value="bun">Bun</option>
+  <option value="carrier">Carrier</option>
+  <option value="carrier">Claw</option>
+  <option value="dove">Dove</option>
+  <option value="hook">Hook</option>
+  <option value="loaf">Loaf</option>
+  <option value="long-barge">Long Barge</option>
+  <option value="long-boat">Long Boat</option>
+  <option value="long-ship">Long Ship</option>
+  <option value="mango">Mango</option>
+  <option value="pond">Pond</option>
+  <option value="pre-block">Pre Block</option>
+  <option value="ship">Ship</option>
+  <option value="snake">Snake</option>
+  <option value="table">Table</option>
+  <option value="tail">Tail</option>
+  <option value="tub">Tub</option>
+</select><br><br>
+Change in population:
+<select name="pop-change" id="pop-change">
+  <option value="unspecified" selected>UNSPECIFIED</option>
+  <option value="-9">-9</option>
+  <option value="-8">-8</option>
+  <option value="-7">-7</option>
+  <option value="-6">-6</option>
+  <option value="-5">-5</option>
+  <option value="-4">-4</option>
+  <option value="-3">-3</option>
+  <option value="-2">-2</option>
+  <option value="-1">-1</option>
+  <option value="0">0</option>
+  <option value="1">+1</option>
+  <option value="2">+2</option>
+  <option value="3">+3</option>
+  <option value="4">+4</option>
+  <option value="5">+5</option>
+  <option value="6">+6</option>
+  <option value="7">+7</option>
+  <option value="8">+8</option>
+  <option value="9">+9</option>
+</select><br><br>
+Glider cost:
+<select name="g-cost" id="g-cost">
+  <option value="unspecified" selected>UNSPECIFIED</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+</select><br><br>
+<!--
+<select name="r-type" id="r-type">
+  <option value="unspecified" selected>UNSPECIFIED</option>
+  <option value="pure">pure</option>
+  <option value="dep">surroundings-dependent</option>
+</select><br><br> -->
+
+
+</p>
+
+
+
+
+<!--viewer container-->
+<div class="viewer"> 
+	<div class="lv-buttons"> 
+		<button onclick="Search()">Search</button>
+		<button onclick="Clear()">Clear Results</button>		
+		<button onclick="updateMe(this)">Update Viewer</button>
+		<!--the element that calls updateMe must be in the viewer container-->
+	</div>
+		<p id = "display"></p>
+	<textarea readonly class="lv-rle" id="lv-text">5bo$6bo$4b3o3$b2o$obo$2bo6b2o$9bobo$11bo$11b2o!</textarea><br/>
+	<canvas height=400 width=600></canvas>
+</div>
+<!--end viewer container-->
+
+
+
+
+
+<p id="ending">Lin Wei-Hsu &nbsp Feb 2022 (v0.1)</p>
+
+
+</center>
+</body>
+</html>
