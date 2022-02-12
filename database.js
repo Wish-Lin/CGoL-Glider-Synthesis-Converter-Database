@@ -54,9 +54,9 @@ function SetCounter() {
 
 function Clear() {
   document.getElementById('lv-text').innerHTML='';
-  document.getElementById("from").value="unspecified";
-  document.getElementById("to").value="unspecified";
-  document.getElementById("pop-change").value="unspecified";
-  document.getElementById("g-cost").value="unspecified";
+  document.getElementById("from").value="bookend";
+  document.getElementById("to").value="bun";
+  document.getElementById("pop-change").value=0;
+  document.getElementById("g-cost").value=2;
    document.getElementById('display').innerHTML ='';
 }
