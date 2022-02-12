@@ -16,7 +16,7 @@ body{
 	background-color:#DBF9FC;
 	margin:50px;
 }
-#banner{
+#banner, #manual-head, #arrow{
 	font-family: Georgia, Verdana, sans-serif;
 	font-size: 50px;
 }
@@ -28,11 +28,7 @@ body{
 	font-family: Georgia, Verdana, sans-serif;
 	font-size: 32px;
 }
-#subtitle{
-	font-family: Georgia, Verdana, sans-serif;
-	font-size: 16px;
-}
-#input-descriptions{
+#subtitle, #input-descriptions, #manual{
 	font-family: Georgia, Verdana, sans-serif;
 	font-size: 16px;
 }
@@ -67,6 +63,7 @@ button{
 <select name="from" id="from">
   <option value="unspecified">UNSPECIFIED</option>
   <option value="other">OTHER</option>
+  <option value="nothing">NOTHING</option>
   <option value="sep-line">-----------------</option>
   <option value="barge">Barge</option>
   <option value="beehive">Beehive</option>
@@ -96,6 +93,7 @@ To:
 <select name="to" id="to">
   <option value="unspecified" selected>UNSPECIFIED</option>
   <option value="other">OTHER</option>
+  <option value="nothing">NOTHING</option>
   <option value="sep-line">-----------------</option>
   <option value="barge">Barge</option>
   <option value="beehive">Beehive</option>
@@ -179,12 +177,20 @@ Glider cost:
 		<!--the element that calls updateMe must be in the viewer container-->
 	</div>
 		<p id = "display"></p>
-	<textarea readonly class="lv-rle" id="lv-text">5bo$6bo$4b3o3$b2o$obo$2bo6b2o$9bobo$11bo$11b2o!</textarea><br/>
-	<canvas height=400 width=600></canvas>
+	<textarea class="lv-rle" id="lv-text">5bo$6bo$4b3o3$b2o$obo$2bo6b2o$9bobo$11bo$11b2o!</textarea><br/>
+	<canvas height=480 width=600></canvas>
 </div>
 <!--end viewer container-->
 
-
+<br><br><hr>
+<p id="manual-head">How to use the search interface:</p>
+<p>
+<ul>
+<li><span id="manual"><b>From & To: The input and output of the converter.</b> For the sake of simplicity and friendliness for newbies in this field like me, this parameter also returns all look-alikes and surrounding-dependent converters, for example:</span><br>
+<img src="img1.png" width=366 height=178></img><br>
+<span id="manual"><b>This converters is catalogued as "From: carrier / To: tub".</b></span>
+</ul>
+</p>
 
 
 

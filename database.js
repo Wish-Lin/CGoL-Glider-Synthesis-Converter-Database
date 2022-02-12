@@ -3,7 +3,7 @@
 const database = [
   ["16$16bo$14b2o$15b2o$10bobo$11b2o$11bo2$15b2o19b2o$15bo2bo16bo2bo$16b3o17b3o2$16b3o17b3o$16bo2bo16bo2bo$17b2o18b2o","bookend","bun",0,2,null],  //BobShemyakin's 2G Database
   ["21$15bobo$15b2o$11bo4bo$12b2o$11b2o7b2o18b2o$16b2obobo14b2obobo$15bobobo17bobo$15bobob2o14bobob2o$16bo18b2o","bun","bookend",0,2,null],
-  ["21$17bobo$18b2o3bo$18bo2b2o$22b2o3$16b2o18bo$11b2o3bo14b2o2bobo$11bo2bobo14bo2bobo$13b2obobo14b2obobo$17b2o18b2o","other","other",0,2,null],
+  ["21$17bobo$18b2o3bo$18bo2b2o$22b2o3$16b2o18bo$11b2o3bo14b2o2bobo$11bo2bobo14bo2bobo$13b2obobo14b2obobo$17b2o18b2o","tail","tub",0,2,null],
   ["26$13bo$13bobo$8bobo2b2o$9b2o$9bo3$14b2o$14bo19b2o$16bo17bobo$15b2o18b2o","carrier","ship",0,2,null],
   ["20$14bobo$11bo2b2o$9bobo3bo$10b2o2$35bo$14b2o3b2o13bobo2b2o$14bo2bo2bo14bo4bo$16b4o16b4o2$18b2o18b2o$18b2o18b2o","carrier","tub",0,2,null],
   ["20$23bo$21bobo$22b2o2$20b2o$16bo3bobo$15bobo2bo14bo2bo$15b2o18b4o2$15b2o18b2o$14bobo17bobo$13bobo17bobo$14bo19bo","boat","table",1,2,null],
@@ -13,6 +13,7 @@ const database = [
   ["19$9bobo$10b2o2bobo$10bo3b2o$15bo4$15b2o18bo$15bo18bobo$17bo17bobo$16b2o18b2o","carrier","long-boat",1,2,null],
   ["19$12bo$11bo$11b3o2$8b2o$9b2o22b2o$8bo4b2o3b2o13bobo2b2o$13bo2bo2bo14bo4bo$15b4o16b4o2$17b2o18b2o$17b2o18b2o","carrier","boat",1,2,null],
   ["16$17bobo$14bo2b2o$12bobo3bo$13b2o2$37b2o$17b2o17bo2bo$15bo2bo16bo2bo$15b3o17b3o2$15b3o17b3o$14bo2bo16bo2bo$15b2o18b2o","bookend","dove",1,2,null],
+  ["","","",1,1,null],
 ];
 
 
